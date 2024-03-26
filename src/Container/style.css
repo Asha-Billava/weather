@@ -1,0 +1,80 @@
+.MainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+    color: white;
+    background-color: #42ADFD;
+    /* background-color: rgba(0,0,0,0.4); */
+    margin-bottom: 0px;
+    bottom: 0;
+    padding: 0px 10px 0px 10px;
+}
+
+.MainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    /* height: 40% !important; */
+    max-width: 20rem;
+
+}
+
+.card-header {
+    background: white !important;
+    text-align: left;
+    font-weight: 700;
+    color: #42ADFD !important;
+}
+
+.cardDiv {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightgray;
+    grid-gap: 12px;
+    font-weight: 700;
+}
+
+.cardDiv div {
+    height: 2px;
+    width: 200px;
+    background-color: lightgray;
+    /* margin-top: 20px; */
+}
+
+
+.form-control {
+    margin-top: 10px;
+    color: lightgray !important;
+    border: 2px solid lightgrey !important;
+    border-radius: 1px !important;
+    text-align: center;
+    font-weight: 500 !important;
+}
+
+.form-control:focus {
+    border-color: none !important;
+    box-shadow: none !important;
+}
+
+.form-control::placeholder {
+    color: lightgray !important;
+}
+
+.btn {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #42ADFD !important;
+    color: white !important;
+    margin-bottom: 7px;
+    border: none !important;
+}
