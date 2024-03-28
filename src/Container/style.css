@@ -1,3 +1,4 @@
+
 .MainContainer {
     display: flex;
     justify-content: center;
@@ -23,7 +24,7 @@
 
 .card {
     /* height: 40% !important; */
-    max-width: 20rem;
+    width: 20rem;
 
 }
 
@@ -32,7 +33,9 @@
     text-align: left;
     font-weight: 700;
     color: #42ADFD !important;
+    font-size: 16px;
 }
+
 
 .cardDiv {
     margin-top: 10px;
@@ -52,6 +55,7 @@
 }
 
 
+/* enter city name input box */
 .form-control {
     margin-top: 10px;
     color: lightgray !important;
@@ -70,6 +74,63 @@
     color: lightgray !important;
 }
 
+/*temperature */
+.InsideCardbody p {
+    font-weight: 500 !important;
+}
+
+
+
+/* card footer for humidity*/
+.card-footer {
+    background: white !important;
+    font-weight: 600;
+    color: #42ADFD !important;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* padding: 0px 10px 0px 10px !important; */
+    padding: 0px !important;
+}
+
+/* horizontal line*/
+.card-footer .horizontal {
+    border-right: 1px solid lightgrey;
+    height: 56px;
+}
+
+/* card footer inside div*/
+.footerInside {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    grid-gap: 7px;
+}
+
+.footerInside i {
+    font-size: 25px;
+}
+
+/* feels like and humidity*/
+.footerInside .temperature {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    color: black;
+}
+
+
+/*  icon*/
+.bi-arrow-left::before {
+    font-weight: bold !important;
+    line-height: 1.2;
+    cursor: pointer;
+}
+
+
+
+/* get devoce location button*/
 .btn {
     margin-top: 10px;
     width: 100%;
@@ -77,4 +138,5 @@
     color: white !important;
     margin-bottom: 7px;
     border: none !important;
+    font-size: 15px !important;
 }
