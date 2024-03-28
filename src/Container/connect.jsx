@@ -21,10 +21,10 @@ function Connect() {
     useEffect(() => {
 
         if (page == 1) {
-            navigate(`/${city !== "" && city.replace(" ", "")}`)
+            navigate(`/weather/${city !== "" && city.replace(" ", "")}`)
         } else {
 
-            navigate("/");
+            navigate("/weather");
         }
     }, [page])
 
@@ -75,11 +75,11 @@ function Connect() {
         <Routes>
             {page !== 1 ? (
                 <>
-                    {/* <Route path="/" element={<Navigate to="/" />} /> */}
-                    <Route path="/" element={<Location city={city} setCity={setCity} getWeatherInfo={getWeatherInfo} error={error} seterror={seterror} />} />
+                    <Route path="/" element={<Navigate to="/weather" />} />
+                    <Route path="/weather" element={<Location city={city} setCity={setCity} getWeatherInfo={getWeatherInfo} error={error} seterror={seterror} />} />
                 </>
             ) : (
-                    <Route path="/:city" element={<Wheather Img={Img} weatherInfo={weatherInfo} setCity={setCity} setpage={setpage} />} />
+                    <Route path="/weather/:city" element={<Wheather Img={Img} weatherInfo={weatherInfo} setCity={setCity} setpage={setpage} />} />
             )} 
             <Route path="*" element={<Location pageNotFound="" />} />
         </Routes>

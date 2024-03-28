@@ -16,7 +16,7 @@ function Wheather(props) {
                 <div class="card-header" >
                     <i className="backarrow  bi-arrow-left"
                         onClick={() => {
-                            navigate("/");
+                            navigate("/weather");
                             props.setpage(0)
                             props.setCity("")
 
