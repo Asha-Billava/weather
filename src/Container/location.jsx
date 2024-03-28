@@ -1,10 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./style.css"
-import { useNavigate } from 'react-router-dom'
 
 function Location(props) {
-    const navigate = useNavigate()
-
     const handleOnclick = () => {
 
         if (navigator.geolocation) {
@@ -20,7 +17,6 @@ function Location(props) {
             console.log("Geolocation is not supported by this browser.");
         }
     };
-    // navigate("/weather/benglore")
 
     return (
         <div className='MainContainer ' >
@@ -28,13 +24,23 @@ function Location(props) {
                 <div class="card-header"> Weather App</div>
                 <div class="card-body">
                     <input type="text" className="form-control inputclass" value={props.city} placeholder="Enter city name" autoFocus="off"
-                        onChange={(e) => { props.setCity(e.target.value) }}
+                        onChange={(e) => {
+                            props.seterror(0)
+                            let text = e.target.value
+                                .replace(/^ /, '')
+                            props.setCity(text)
+
+                        }}
                         onKeyPress={(e) => {
                             if (e.key === 'Enter' && e.target.value !== "") {
-                                props.getWeatherInfo()
+                                props?.getWeatherInfo()
+                            }
+                            else {
+                                props?.seterror(1)
                             }
                         }}
                     />
+                    <span className='error'>{props.error === 1 ? "*Please enter city" : props.error === 2 ? "*City not found" : ""}</span>
                     <div className='cardDiv'>
                         <div></div><h6>or</h6><div></div>
                     </div>

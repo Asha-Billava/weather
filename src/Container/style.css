@@ -74,9 +74,14 @@
     color: lightgray !important;
 }
 
+.error {
+    font-size: 12px;
+    color: lightgray;
+    font-weight: bold;
+}
 /*temperature */
 .InsideCardbody p {
-    font-weight: 500 !important;
+    font-weight: 600 !important;
 }
 
 
