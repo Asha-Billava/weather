@@ -14,7 +14,6 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Connect />
-
     </BrowserRouter>
   </React.StrictMode>
 );

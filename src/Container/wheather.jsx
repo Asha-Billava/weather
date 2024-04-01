@@ -3,10 +3,19 @@ import "./style.css"
 import { useNavigate } from 'react-router-dom'
 import cloud from "../assets/cloudy.png"
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
+
 
 function Wheather(props) {
 
     const navigate = useNavigate()
+    const location=useLocation()
+
+
+    useEffect(() => {
+        props.getWeatherInfo("", location.state.palce)
+    }, [])
+    
 
 
 
